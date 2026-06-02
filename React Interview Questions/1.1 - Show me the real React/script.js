@@ -5,12 +5,15 @@ function Counter(){
         setCounter(counter => counter+1);
     }
 
-    return React.createElement(
-        "div",
-        null,
-        React.createElement("p",null,`Count: ${counter}`),
-        React.createElement("button",{onClick:handleClick},`Increment`)
-    )
+    const counter = React.createElement(
+      "div",
+      null,
+      React.createElement("p", null, `Count: ${counter}`),
+      React.createElement("button", { onClick: handleClick }, `Increment`),
+    );
+
+    console.log("counter ", counter);
+    return counter;
 }
 
 const root =  ReactDOM.createRoot(document.getElementById("root"));
